@@ -1,3 +1,5 @@
+cd ~/Downloads
+
 #Atualização
 
 sudo apt update -y
@@ -21,7 +23,7 @@ sudo apt-get install git -y
 #Puxando repositório do git
 
 cd 
-cd Imagens
+cd ~/Imagens
 sudo rm -r imagens_saojose
 git clone https://github.com/iesjti/imagens_saojose.git
 cd
