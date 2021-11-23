@@ -27,3 +27,8 @@ cd ~/Imagens
 sudo rm -r imagens_saojose
 git clone https://github.com/iesjti/imagens_saojose.git
 cd
+
+#Instalação do UCS Join
+sudo add-apt-repository ppa:univention-dev/ppa
+sudo apt update
+sudo DEBIAN_FRONTEND=noninteractive apt install univention-domain-join -y
