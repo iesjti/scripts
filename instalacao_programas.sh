@@ -17,8 +17,6 @@ sudo apt install ./google-chrome-stable_current_amd64.deb
 
 #Instalação do Git
 sudo apt-get install git -y
-git config --global user.name "iesjti"
-git config --global user.email "iesj.ti@saojoseteresina.com.br"
 
 #Puxando repositório do git
 
