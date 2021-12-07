@@ -17,6 +17,11 @@ sudo apt-get install -f
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
 
+#Adicionar programa para câmera usb
+sudo add-apt-repository ppa:pj-assis/testing
+sudo apt-get update -y
+sudo apt-get install guvcview -y
+
 #Instalação do Git
 sudo apt-get install git -y
 
@@ -32,3 +37,4 @@ cd
 sudo add-apt-repository ppa:univention-dev/ppa
 sudo apt update
 sudo DEBIAN_FRONTEND=noninteractive apt install univention-domain-join -y
+
