@@ -5,6 +5,13 @@ cd ~/Downloads
 sudo apt update -y
 sudo apt upgrade -y
 
+sudo apt-get install build-essential -y
+sudo apt-get install linux-headers-$(uname -r)
+sudo apt-get install pavucontrol
+
+#Habilitar supressão de ruído
+pactl load-module module-echo-cancel aec_method=webrtc sink_properties=device.description="Noise_Reduction" aec_args="analog_gain_control=0\ digital_gain_control=0"
+
 #Instalação das fontes MS Office para Libreoffice
 sudo apt-get install ttf-mscorefonts-installer
 
