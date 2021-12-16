@@ -1,3 +1,4 @@
+!/bin/bash
 ############################################################################### #SCRIPT PARA REALIZAÇÃO AUTOMÁTICA DE BACKUP USANDO GOOGLE DRIVE VIA GRIVE2####
 ################################################################################
 
@@ -9,7 +10,7 @@ echo 'IESJTI2021@_' | sudo -S cp -fR Servidor Backup_drive
 
 # Mover para pasta de backup
 cd 
-cd Backup_drive
+cd /Backup_drive
 # Conecta com o Google Drive e faz upload
 echo 'IESJTI2021@_' | sudo -S grive
 
