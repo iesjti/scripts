@@ -10,8 +10,8 @@ echo 'IESJTI2021@_' | sudo -S cp -fR Servidor Backup_drive
 # Mover para pasta de backup
 cd 
 cd /Backup_drive
-# Conecta com o Google Drive e faz upload
-echo 'IESJTI2021@_' | sudo -S grive
+# Conecta com o Google Drive e faz upload mostrando barra de progresso
+echo 'IESJTI2021@_' | sudo -S grive -P  
 
 
 
