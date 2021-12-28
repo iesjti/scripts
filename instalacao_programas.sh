@@ -50,7 +50,7 @@ wget https://repo.zabbix.com/zabbix/5.4/ubuntu/pool/main/z/zabbix-release/zabbix
 sudo dpkg -i zabbix-release_5.4-1+ubuntu20.04_all.deb
 sudo apt update
 sudo apt install zabbix-agent
-sudo nano /etc/zabbix/zabbix_agentd.conf ## Adicionar nesse arquivo Server=[zabbix server ip] = ServerActive e Hostname=[hostname do cliente]
+sudo nano /etc/zabbix/zabbix_agentd.conf ## Adicionar nesse arquivo Server=[zabbix server ip] = ServerActive; Hostname=[hostname do cliente]; HostMetadataItem = system.uname
 
 sudo systemctl restart zabbix-agent
 sudo systemctl enable zabbix-agent
