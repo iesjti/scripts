@@ -17,6 +17,7 @@ sudo apt-get install ttf-mscorefonts-installer
 
 #Instalar WPS Office Sem conexão com internet
 sudo rv /etc/apt/preferences.d/nosnap.pref ~ #Removendo bloqueio ao snap no linux Mint 20.2
+sudo apt-get install snapd
 sudo snap install wps-office-all-lang-no-internet
 sudo snap refresh wps-office-all-lang-no-internet
 sudo snap connect wps-office-all-lang-no-internet:cups-control :cups-control
