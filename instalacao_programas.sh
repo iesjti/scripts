@@ -15,6 +15,12 @@ pactl load-module module-echo-cancel aec_method=webrtc sink_properties=device.de
 #Instalação das fontes MS Office para Libreoffice
 sudo apt-get install ttf-mscorefonts-installer
 
+#Instalar WPS Office Sem conexão com internet
+sudo rv /etc/apt/preferences.d/nosnap.pref ~ #Removendo bloqueio ao snap no linux Mint 20.2
+sudo snap install wps-office-all-lang-no-internet
+sudo snap refresh wps-office-all-lang-no-internet
+sudo snap connect wps-office-all-lang-no-internet:cups-control :cups-control
+
 #instalação zoom
 wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom.deb
 sudo dpkg -i zoom.deb
@@ -23,6 +29,9 @@ sudo apt-get install -f
 #Instalação Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb
+
+
+
 
 #Adicionar programa para câmera usb
 sudo add-apt-repository ppa:pj-assis/testing
