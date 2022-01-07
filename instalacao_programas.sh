@@ -67,3 +67,12 @@ sudo nano /etc/zabbix/zabbix_agentd.conf ## Adicionar nesse arquivo Server=[zabb
 
 sudo systemctl restart zabbix-agent
 sudo systemctl enable zabbix-agent
+
+
+#Editar regras firewall para permitir ZAbbix
+
+sudo ufw enable
+sudo ufw allow 10050/tcp
+sudo ufw allow 20051/tcp
+
+
