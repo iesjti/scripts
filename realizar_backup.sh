@@ -6,7 +6,7 @@
 cd /
 
 # Copiar os arquivos para a pasta que liga ao Drive
-echo 'IESJTI2021@_' | sudo -S cp -fR Servidor Backup_drive
+echo 'IESJTI2021@_' | sudo -S cp -fR Servidor Backup_drive | progress -m
 
 # Mover para pasta de backup
 cd 
