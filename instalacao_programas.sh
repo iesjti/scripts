@@ -87,7 +87,7 @@ read pasta
 echo "#!/bin/bash" >> "servidor-local-$pasta.txt"
 echo nemo smb://iesjserver.saojose.iesj/$pasta >> "servidor-local-$pasta.txt"
 
-chmod 764 "servidor-local-$pasta.txt"
+chmod 777 "servidor-local-$pasta.txt"
 
 sudo mv "servidor-local-$pasta.txt" /usr/bin/
 
