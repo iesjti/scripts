@@ -19,9 +19,9 @@ sudo apt-get install ttf-mscorefonts-installer
 sudo apt install firejail -y
 
 #instalação zoom
-wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom.deb
-sudo dpkg -i zoom.deb
-sudo apt-get install -f
+#wget https://zoom.us/client/latest/zoom_amd64.deb -O zoom.deb
+#sudo dpkg -i zoom.deb
+#sudo apt-get install -f
 
 #Instalação Chrome
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
@@ -81,13 +81,13 @@ sudo ufw allow 10050/tcp
 sudo ufw allow 20051/tcp
 
 ### Adicionar Acesso ao Servidor local
-printf "Usuário tem acesso a qual pasta?(CGA, Publica, PTI, COORDENACAO): "
-read pasta
+#printf "Usuário tem acesso a qual pasta?(CGA, Publica, PTI, COORDENACAO): "
+#read pasta
 
-echo "#!/bin/bash" >> "servidor-local-$pasta.txt"
-echo nemo smb://iesjserver.saojose.iesj/$pasta >> "servidor-local-$pasta.txt"
+#echo "#!/bin/bash" >> "servidor-local-$pasta.txt"
+#echo nemo smb://iesjserver.saojose.iesj/$pasta >> "servidor-local-$pasta.txt"
 
-chmod 777 "servidor-local-$pasta.txt"
+#chmod 777 "servidor-local-$pasta.txt"
 
-sudo mv "servidor-local-$pasta.txt" /usr/bin/
+#sudo mv "servidor-local-$pasta.txt" /usr/bin/
 
