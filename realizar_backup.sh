@@ -6,7 +6,7 @@
 cd /
 
 # Copiar os arquivos para a pasta que liga ao Drive
-echo 'IESJTI2021@_' | sudo -S cp -fR Servidor Backup_drive | progress -m
+echo 'IESJTI2021@_' | sudo -S rsync -aP Servidor/ Backup_drive/Servidor
 
 # Mover para pasta de backup
 cd 
