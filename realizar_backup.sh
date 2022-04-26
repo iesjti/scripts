@@ -1,18 +1,11 @@
 #!/bin/bash
-############################################################################### #SCRIPT PARA REALIZAÇÃO AUTOMÁTICA DE BACKUP USANDO GOOGLE DRIVE VIA GRIVE2####
-################################################################################
+###########################SCRIPT PARA REALIZAÇÃO AUTOMÁTICA DE BACKUP########################################
 
-# Mover para pasta home que têm os arquivos
-cd /
+#Parte 1 - Copiar arquivos do servidor para a pasta que será montada
+sudo mount -t cifs -o rw,vers=3.0,credentials=/root/.AdminCredentials //10.0.0.220/Backup /media/backup_servidor
 
-# Copiar os arquivos para a pasta que liga ao Drive
-echo 'IESJTI2021@_' | sudo -S rsync -auP Servidor/ Backup_drive/Servidor
 
-# Mover para pasta de backup
-cd 
-cd /Backup_drive
-# Conecta com o Google Drive e faz upload mostrando barra de progresso
-echo 'IESJTI2021@_' | sudo -S grive -P  
-
+#Parte 2 - Realizar a sincronização da pasta montada para o HD de backup 1 
+echo 'IESJTI2021@_' | sudo -S rsync -auP /media/backup_servidor /media/Administrator/HD_BACKUP_1
 
 
