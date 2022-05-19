@@ -16,5 +16,5 @@ rclone mount googleDrive:Backup_Servers /mnt/pve/SVM04-BACKUP-GERAL/backup_drive
 ## na pasta "backup_drive". O comando é:
 
 rsync -auP /mnt/pve/SVM04-BACKUP-GERAL/dump/ /mnt/pve/SVM04-BACKUP-GERAL/backup_drive
-
+cd
 ## Cada arquivo colocado na pasta backup_drive é automaticamente sincronizado com o Google Drive
