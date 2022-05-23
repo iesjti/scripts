@@ -10,11 +10,16 @@
 ## O primeiro passo para enviar esse backup para nuvem é fazer o Mount da pasta "Backup_Servers"
 ## presente no Google Drive no HD de backup, mais precisamente na pasta "backup_drive". O comando é:
 
+cd /mnt/pve/SVM04-BACKUP-GERAL/
+mkdir backup_drive
 rclone mount googleDrive:Backup_Servers /mnt/pve/SVM04-BACKUP-GERAL/backup_drive --daemon --allow-non-empty
 
-## Em seguida, é necessário sincronizar o arquivo de imagem gerado pelo Proxmox dentro da pasta "dump"
-## na pasta "backup_drive". O comando é:
+## Em seguida, é necessário sincronizar o arquivo de imagem gerado pelo Proxmox dentro da pasta dump
+## na pasta backup_drive. O comando é:
 
 rsync -auP /mnt/pve/SVM04-BACKUP-GERAL/dump/ /mnt/pve/SVM04-BACKUP-GERAL/backup_drive
+fusermount -u /mnt/pve/SVM04-BACKUP-GERAL/backup_drive
 cd
+rm -r mnt/pve/SVM04-BACKUP-GERAL/backup_drive
+
 ## Cada arquivo colocado na pasta backup_drive é automaticamente sincronizado com o Google Drive
