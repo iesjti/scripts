@@ -3,5 +3,5 @@
 ### Enviar arquivos do Servidor UCS principal para o Servidor UCS Backup via SCP
 cd
 cd /
-echo 'Iesjti2022@%_' | scp -r Servidor Administrator@10.0.0.21:/home/Administrator/Backup_Server
+ssh Administrator@10.0.0.220 rsync -auP /Servidor/PTI Administrator@10.0.0.21:/home/Administrator/Backup_Server
 
