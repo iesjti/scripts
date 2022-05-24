@@ -1,6 +1,7 @@
 #/bin/bash
 
-### Sincronização entre a Pasta do Mount e a pasta FIXA de backup
+### Enviar arquivos do Servidor UCS principal para o Servidor UCS Backup via SCP
 cd
 cd /
-echo 'Iesjti2022@%_' | sudo -S rsync -auP /Replica_main_server /Servidor/
+echo 'Iesjti2022@%_' | scp -r Servidor Administrator@10.0.0.21:/home/Administrator/Backup_Server
+
