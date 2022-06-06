@@ -2,7 +2,7 @@
 #### SCRIPT PARA BACKUP DOS ARQUIVOS CONTIDOS NAS MÁQUINAS VIRTUAIS DO PROXMOX
 
 
-#### O Proxmox está configurado para fazer o backup de todas as máquinas virtuais todo DOMINGO as 01:00h da manhã
+#### O Proxmox está configurado para fazer o backup de todas as máquinas virtuais todo SÁBADO as 04:00h da manhã
 
 ### Os backups são salvos no disco "SVM04-BACKUP-GERAL", que possui capacidade de 1TB e é dedicado exclusivamente
 ### para o backup. Os arquivos de imagem ficam salvos na pasta DUMP.
